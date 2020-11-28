@@ -1,0 +1,154 @@
+<nav class="navbar-header">
+  <a
+    (click)="toggleMobileMenuHome()"
+    [routerLink]="['/landing-menu']"
+    routerLinkActive="active"
+    mat-button
+    class="mat-focus-indicator mat-button mat-button-base"
+    tabindex="0"
+    ><span class="mat-button-wrapper"><span>Wash Me</span></span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+  <a
+    mat-button
+    class="mat-focus-indicator navbar-hide-small mat-button mat-button-base"
+    tabindex="0"
+    [routerLink]="['/bookings/book-a-wash']"
+    [class.active]="isActive(['bookings'])"
+    ><span class="mat-button-wrapper">Book A Wash</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+  <a
+    mat-button
+    class="mat-focus-indicator navbar-hide-small mat-button mat-button-base"
+    tabindex="0"
+    [routerLink]="['/management/queue']"
+    routerLinkActive="active"
+    ><span class="mat-button-wrapper">Manage Queue</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+  <a
+    mat-button
+    class="mat-focus-indicator navbar-hide-small mat-button mat-button-base"
+    tabindex="0"
+    [routerLink]="['/management/products']"
+    routerLinkActive="active"
+    ><span class="mat-button-wrapper">Manage Products</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+  <a
+    mat-button
+    class="mat-focus-indicator navbar-hide-small mat-button mat-button-base"
+    tabindex="0"
+    [routerLink]="['/requests/request-a-wash-landing']"
+    [class.active]="isActive(['requests'])"
+    ><span class="mat-button-wrapper">Request A Wash</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+  <a
+    mat-button
+    class="mat-focus-indicator navbar-hide-small mat-button mat-button-base"
+    tabindex="0"
+    [routerLink]="['/management/requests']"
+    routerLinkActive="active"
+    ><span class="mat-button-wrapper">Manage Requests</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+
+  <div class="flex-spacer"></div>
+  <a
+    mat-button
+    [routerLink]="['/auth']"
+    class="mat-focus-indicator navbar-hide-small mat-button mat-button-base"
+    tabindex="0"
+    ><span class="mat-button-wrapper"> Logout </span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+  <a
+    mat-button
+    (click)="toggleMobileMenu()"
+    class="mat-focus-indicator navbar-show-small mat-icon-button mat-button-base"
+    tabindex="0"
+    ><span class="mat-button-wrapper"><mat-icon>menu</mat-icon></span
+    ><span
+      matripple=""
+      class="mat-ripple mat-button-ripple mat-button-ripple-round"
+    ></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+  <a
+    mat-button
+    [routerLink]="['/auth']"
+    class="mat-focus-indicator navbar-show-small mat-icon-button mat-button-base"
+    tabindex="0"
+    ><span class="mat-button-wrapper"> Logout</span
+    ><span
+      matripple=""
+      class="mat-ripple mat-button-ripple mat-button-ripple-round"
+    ></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+</nav>
+
+<nav *ngIf="showMobileMenu" class="navbar navbar-show-small">
+  <a
+    (click)="toggleMobileMenu()"
+    mat-button
+    class="mat-focus-indicator navbar-link mat-button mat-button-base"
+    tabindex="0"
+    [routerLink]="['/bookings/book-a-wash']"
+    [class.active]="isActive(['bookings'])"
+    ><span class="mat-button-wrapper">Book A Wash</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span></a
+  ><a
+    (click)="toggleMobileMenu()"
+    mat-button
+    class="mat-focus-indicator navbar-link mat-button mat-button-base"
+    tabindex="0"
+    [routerLink]="['/management/queue']"
+    routerLinkActive="active"
+    ><span class="mat-button-wrapper">Manage Queue</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span></a
+  ><a
+    (click)="toggleMobileMenu()"
+    mat-button
+    [routerLink]="['/management/products']"
+    routerLinkActive="active"
+    class="mat-focus-indicator navbar-link mat-button mat-button-base"
+    tabindex="0"
+    ><span class="mat-button-wrapper">Manage Products</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+  <a
+    (click)="toggleMobileMenu()"
+    mat-button
+    [routerLink]="['/requests/request-a-wash-landing']"
+    [class.active]="isActive(['requests'])"
+    class="mat-focus-indicator navbar-link mat-button mat-button-base"
+    tabindex="0"
+    ><span class="mat-button-wrapper">Request A Wash</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+  <a
+    (click)="toggleMobileMenu()"
+    mat-button
+    [routerLink]="['/management/requests']"
+    routerLinkActive="active"
+    class="mat-focus-indicator navbar-link mat-button mat-button-base"
+    tabindex="0"
+    ><span class="mat-button-wrapper">Manage Requests</span
+    ><span matripple="" class="mat-ripple mat-button-ripple"></span
+    ><span class="mat-button-focus-overlay"></span
+  ></a>
+</nav>

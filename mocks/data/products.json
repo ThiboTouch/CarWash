@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Full Wash",
+      "price": 150,
+      "estimatedTime": 45
+    },
+    {
+      "id": 2,
+      "name": "Exterior",
+      "price": 100,
+      "estimatedTime": 30
+    }
+  ]
+}

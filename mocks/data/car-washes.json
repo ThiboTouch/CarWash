@@ -1,0 +1,74 @@
+{
+  "car-washes": [
+    {
+      "id": 1,
+      "name": "Buckets of Clean",
+      "distance": 10,
+      "rating": 4,
+      "slots": 2
+    },
+    {
+      "id": 2,
+      "name": "Icy Glazers",
+      "distance": 5,
+      "rating": 3,
+      "slots": 2
+    },
+    {
+      "id": 3,
+      "name": "Soapy Shine",
+      "distance": 7,
+      "rating": 2,
+      "slots": 2
+    },
+    {
+      "id": 4,
+      "name": "Washed Up",
+      "distance": 17,
+      "rating": 1,
+      "slots": 2
+    },
+    {
+      "id": 5,
+      "name": "Wash Me",
+      "distance": 52,
+      "rating": 5,
+      "slots": 2
+    },
+    {
+      "id": 6,
+      "name": "Hulio's In",
+      "distance": 12,
+      "rating": 5,
+      "slots": 2
+    },
+    {
+      "id": 7,
+      "name": "Splashy",
+      "distance": 14,
+      "rating": 4,
+      "slots": 2
+    },
+    {
+      "id": 8,
+      "name": "Speek n Span",
+      "distance": 23,
+      "rating": 1,
+      "slots": 2
+    },
+    {
+      "id": 9,
+      "name": "Hell's Garage",
+      "distance": 34,
+      "rating": 2,
+      "slots": 2
+    },
+    {
+      "id": 10,
+      "name": "Olifant's Splash",
+      "distance": 16,
+      "rating": 5,
+      "slots": 2
+    }
+  ]
+}

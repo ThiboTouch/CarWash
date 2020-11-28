@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let requestProduct of requestProducts">
+      <div class="col-md-3 col-sm-12">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{requestProduct.name}}</mat-card-title>
+          </mat-card-header>
+          <div mat-card-image>
+            <img src="../../assets/pablo-835.png" alt="Illustration" />
+          </div>
+          <mat-card-content>
+            <p>
+              <label>Price</label>
+              <label class="float-right">R{{requestProduct.price}}</label>
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-flat-button color="primary" (click)="openDialog(requestProduct)"
+              >Request</a
+            >
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

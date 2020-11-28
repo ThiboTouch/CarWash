@@ -1,0 +1,82 @@
+<div class="login-layout flex-column">
+  <div class="layout-container">
+    <div class="layout-vertical-spacer-top"></div>
+
+    <div class="layout-vertical-container">
+      <div class="layout-horizontal-container">
+        <mat-card class="card">
+          <h1>Wash Me</h1>
+          <img src="../../assets/pablo-835.png" alt="Illustration" />
+          <mat-card-content>
+            <form *ngIf="!signUpMode" class="login-form">
+              <mat-form-field class="login-full-width">
+                <mat-label>Email</mat-label>
+                <input
+                  type="email"
+                  matInput
+                  placeholder="Ex. pat@example.com"
+                />
+              </mat-form-field>
+              <mat-form-field class="login-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Ex. P@ssword123" />
+              </mat-form-field>
+            </form>
+
+            <form *ngIf="signUpMode" class="login-form">
+              <mat-form-field class="login-full-width">
+                <mat-label>Email</mat-label>
+                <input
+                  type="email"
+                  matInput
+                  placeholder="Ex. pat@example.com"
+                />
+              </mat-form-field>
+              <mat-form-field class="login-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Ex. P@ssword123" />
+              </mat-form-field>
+              <mat-form-field class="login-full-width">
+                <mat-label>Confirm Password</mat-label>
+                <input type="password" matInput placeholder="Ex. P@ssword123" />
+              </mat-form-field>
+              <div class="account-type-section">
+                <div>
+                  <label>Account Type:</label>
+                </div>
+                <div>
+                  <mat-radio-group>
+                    <mat-radio-button value="customer"
+                      >Customer</mat-radio-button
+                    >
+                    <mat-radio-button value="serviceProvider"
+                      >Service Provider</mat-radio-button
+                    >
+                  </mat-radio-group>
+                </div>
+              </div>
+            </form>
+          </mat-card-content>
+          <mat-card-actions>
+            <ng-container *ngIf="!signUpMode">
+              <button mat-flat-button color="primary" (click)="navigate()">Login</button>
+              <button mat-button color="primary" (click)="toggleSignUpMode()">
+                Sign Up
+              </button>
+            </ng-container>
+            <ng-container *ngIf="signUpMode">
+              <button mat-flat-button color="primary" (click)="navigate()">Submit</button>
+              <button mat-button color="warn" (click)="toggleSignUpMode()">
+                Cancel
+              </button>
+            </ng-container>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="layout-vertical-spacer-bottom"></div>
+
+    <div class="footer body-smallest">© Wash Me 2020</div>
+  </div>
+</div>

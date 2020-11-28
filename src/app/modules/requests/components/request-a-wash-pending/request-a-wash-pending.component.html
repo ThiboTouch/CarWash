@@ -1,0 +1,22 @@
+<div *ngIf="apiLoaded | async" class="container">
+  <div class="row">
+    <div class="col-12">
+      <google-map width="100%" height="700px" [options]="options"></google-map>
+
+      <mat-card class="mat-elevation-z8">
+        <mat-card-header>
+          <div mat-card-avatar class="profile-photo"></div>
+          <mat-card-title>{{myRequest?.serviceProviderName}}</mat-card-title>
+          <mat-card-subtitle>{{myRequest?.serviceProviderCompany}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{statusDescription}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button *ngIf = "(myRequest.status !== 'DONE' || myRequest.statusDetails !== 'ENDED') && (myRequest.statusDetails !== 'ARRIVED' && myRequest.statusDetails !== 'STARTED')" mat-button (click) = "openDialog('CANCEL')">CANCEL</button>
+          <button *ngIf = "myRequest.status === 'DONE' && myRequest.statusDetails === 'ENDED'"  mat-button (click) = "openDialog('ENDED')">FINISH</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

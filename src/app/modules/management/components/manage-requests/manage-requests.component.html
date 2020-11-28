@@ -1,0 +1,144 @@
+<div class="container">
+
+
+  <div class="row action-button">
+    <div class="col-md-3 col-sm-12">
+      <button
+        class="button-width"
+        mat-raised-button 
+        matBadge="{{incomingBadge}}"
+        matTooltip="Incoming request"
+        (click) = "showRequest(0)"  
+      >Incoming
+      </button>
+    </div>
+    <div class="col-md-3 col-sm-12">
+      <button
+        class="button-width"
+        mat-raised-button
+        matBadge="{{pendingBadge}}"
+        matTooltip="Active request" 
+        (click) = "showRequest(1)"
+      >Pending
+      </button>
+    </div>
+    <div class="col-md-3 col-sm-12">
+      <button
+        class="button-width"
+        mat-raised-button
+        matBadge="{{activeBadge}}"
+        matTooltip="Pending request"
+        (click) = "showRequest(2)"
+      >Active
+      </button>
+    </div>
+  </div>
+
+  <div class="row card-margin" *ngFor = "let item of requests">
+    <div *ngIf = "incoming && item.status === 'INCOMING'" class="col-md-3 col-sm-12">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <div class="incoming"></div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <label>Incoming</label>
+                <label>{{item.product.name}}</label>
+              </div>
+            </div>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-divider></mat-divider>
+          <br />
+          <p>
+            <label>Customer: {{item.customer}}</label>
+            <label>Location: {{item.location}}</label>
+            <label>Distance: {{item.distance}}</label>
+          </p>
+          <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-flat-button (click) = "accept(item)">Accept</a>
+          <a mat-flat-button (click) = "decline(item)" class="float-right">Decline</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div *ngIf = "active && item.status === 'ACTIVE'" class="col-md-3 col-sm-12">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <div class="active"></div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <label>Active</label>
+                <label>{{item.product.name}}</label>
+              </div>
+            </div>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-divider></mat-divider>
+          <br />
+          <p>
+            <label>Customer: {{item.customer}}</label>
+            <label>Location: {{item.location}}</label>
+            <label>Distance: {{item.distance}}</label>
+          </p>
+          <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-actions>
+          <a
+            *ngIf="item.statusDetails === 'ARRIVED'"
+            mat-flat-button
+            (click)="startWash(item)"
+            >Start Wash</a
+          >
+          <a *ngIf="item.statusDetails === 'STARTED'" mat-flat-button (click) = "endWash(item)">End Wash</a>
+          <a *ngIf="item.statusDetails === 'COMING'" mat-flat-button (click)="washArrived(item)"
+            >Arrived</a
+          >
+          <a *ngIf="item.status === 'ACTIVE' && item.statusDetails !== 'STARTED'" mat-flat-button class="float-right" (click) = "decline(item)">Cancel</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div *ngIf = "pending && item.status === 'PENDING'" class="col-md-3 col-sm-12">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <div class="pending"></div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <label>Pending</label>
+                <label>{{item.product.name}}</label>
+              </div>
+            </div>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-divider></mat-divider>
+          <br />
+          <p>
+            <label>Customer: {{item.customer}}</label>
+            <label>Location: {{item.location}}</label>
+            <label>Distance: {{item.distance}}</label>
+          </p>
+          <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-flat-button>Cancel</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <br>
+  <h1 *ngIf = "requests?.length == 0">No Request Available</h1>
+</div>

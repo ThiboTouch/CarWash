@@ -1,0 +1,16 @@
+div.map-container {
+  width: 100%;
+}
+
+mat-card {
+  width: 80%;
+  position: absolute;
+  top: 75%;
+  left: 10%;
+  right: 0;
+
+  div.profile-photo {
+    background-image: url("../../../../../assets/profile-photo.jpg");
+    background-size: cover;
+  }
+}

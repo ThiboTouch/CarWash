@@ -1,0 +1,23 @@
+{
+    "request-wash": [
+      {
+        "id": 1,
+        "serviceProviderName": "David Mncunu",
+        "serviceProviderCompany": "The Washers inc.",
+        "status": "Active",
+        "statusDetails": "Accepted",
+        "currentUser": false,
+        "customer": "Lethabo Mbokazi",
+        "distance": "15 km",
+        "location": "252 Montrose Avenue, Randburg 2162",
+        "product": { 
+            "id": 1,
+            "name": "Full Wash",
+            "price": 200,
+            "estimatedTime": 60
+          }
+      }
+    ]
+}
+
+  

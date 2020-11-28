@@ -1,0 +1,27 @@
+.minus-icon {
+  font-size: xxx-large;
+  position: absolute;
+  top: -4px;
+  left: 9px;
+  padding-left: 9%;
+}
+
+.plus-icon {
+  font-size: xxx-large;
+  position: absolute;
+  top: -3px;
+  left: 9px;
+  padding-left: 10%;
+}
+
+.mat-form-field-infix {
+  display: block;
+  position: relative;
+  flex: auto;
+  min-width: 0;
+  width: 100%;
+}
+
+div.action-button {
+  margin-bottom: 3em;
+}
