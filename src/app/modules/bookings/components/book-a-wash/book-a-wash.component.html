@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-12" *ngFor="let item of carWashes">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+        </mat-card-header>
+        <div mat-card-image>
+          <img src="../../assets/pablo-835.png" alt="Illustration" />
+        </div>
+        <mat-card-content>
+          <p>
+            <label>
+              Distance
+
+              <mat-icon
+                color="accent"
+                >place</mat-icon
+              >
+            </label>
+            <label>{{ item.distance }} KM</label>
+          </p>
+          <p>
+            <label
+              >Ratings
+              <rating
+                [(ngModel)]="item.rating"
+                [max]="ratingMax"
+                [readonly]="ratingIsReadonly"
+              ></rating
+            ></label>
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a
+            mat-flat-button
+            color="primary"
+            [routerLink]="['/bookings/book-a-wash-details']"
+            [queryParams]="{id: item.id}"
+            >Launch</a
+          >
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

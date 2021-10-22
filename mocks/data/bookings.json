@@ -1,0 +1,100 @@
+{
+  "carWashBookings": [
+    {
+      "id": 1,
+      "timeIn": "11:30",
+      "estimatedTimeOut": "12:00",
+      "status": "ACTIVE",
+      "notes": "",
+      "position": 1,
+      "currentUser": false,
+      "code": "hkajshd872",
+      "product": {
+        "id": 1,
+        "name": "Full Wash",
+        "price": 150,
+        "estimatedTime": 45
+      }
+    },
+    {
+      "id": 2,
+      "timeIn": "11:30",
+      "estimatedTimeOut": "12:00",
+      "status": "ACTIVE",
+      "notes": "",
+      "position": 2,
+      "currentUser": false,
+      "code": "defzaxd872",
+      "product": {
+        "id": 2,
+        "name": "Exterior",
+        "price": 100,
+        "estimatedTime": 30
+      }
+    },
+    {
+      "id": 3,
+      "timeIn": "12:00",
+      "estimatedTimeOut": "12:30",
+      "status": "ENQUEUED",
+      "notes": "",
+      "position": 3,
+      "currentUser": false,
+      "code": "fvftgffd872",
+      "product": {
+        "id": 2,
+        "name": "Exterior",
+        "price": 100,
+        "estimatedTime": 30
+      }
+    },
+    {
+      "id": 4,
+      "timeIn": "12:30",
+      "estimatedTimeOut": "13:00",
+      "status": "ENQUEUED",
+      "notes": "Please do not use the hoover on the back",
+      "position": 4,
+      "currentUser": true,
+      "code": "redhbvd343",
+      "product": {
+        "id": 1,
+        "name": "Full Wash",
+        "price": 150,
+        "estimatedTime": 45
+      }
+    },
+    {
+      "id": 5,
+      "timeIn": "13:00",
+      "estimatedTimeOut": "13:30",
+      "status": "CANCELLED",
+      "notes": "",
+      "position": 5,
+      "currentUser": false,
+      "code": "redgfdc433",
+      "product": {
+        "id": 2,
+        "name": "Exterior",
+        "price": 100,
+        "estimatedTime": 30
+      }
+    },
+    {
+      "id": 6,
+      "timeIn": "13:30",
+      "estimatedTimeOut": "14:00",
+      "status": "DONE",
+      "notes": "",
+      "position": 6,
+      "currentUser": false,
+      "code": "edswedf231",
+      "product": {
+        "id": 2,
+        "name": "Exterior",
+        "price": 100,
+        "estimatedTime": 30
+      }
+    }
+  ]
+}

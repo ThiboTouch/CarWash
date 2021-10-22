@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let product of products">
+      <div class="col-md-3 col-sm-12">
+        <mat-card>
+          <div mat-card-image>
+            <img src="../../assets/pablo-835.png" alt="Illustration" />
+          </div>
+          <mat-card-content>
+            <p>
+              <label>{{product.name}}</label>
+              <label class="float-right">R{{product.price}}</label>
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button [disabled] = "currentUser && isDisabled"  matTooltip="Add a booking to the queue for this product" mat-mini-fab color="primary">
+              <mat-icon (click) = "openDialog(product)">add</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{
+    "request-products": [
+      {
+        "id": 1,
+        "name": "Full Wash",
+        "price": 200,
+        "estimatedTime": 60
+      },
+      {
+        "id": 2,
+        "name": "Exterior Wash",
+        "price": 130,
+        "estimatedTime": 45
+      },
+      {
+        "id": 3,
+        "name": "Interior Wash",
+        "price": 100,
+        "estimatedTime": 30
+      }
+    ]
+  }
+  

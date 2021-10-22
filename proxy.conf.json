@@ -1,0 +1,8 @@
+{
+  "/car-washes": { "target": "http://localhost:3000", "secure": false },
+  "/products": { "target": "http://localhost:3000", "secure": false },
+  "/carWashBookings": { "target": "http://localhost:3000", "secure": false },
+  "/request-products": { "target": "http://localhost:3000", "secure": false },
+  "/request-wash": { "target": "http://localhost:3000", "secure": false }
+  
+}

@@ -1,0 +1,242 @@
+{
+  "car-washes": [
+    {
+      "id": 1,
+      "name": "Buckets of Clean",
+      "distance": 10,
+      "rating": 4,
+      "slots": 2
+    },
+    {
+      "id": 2,
+      "name": "Icy Glazers",
+      "distance": 5,
+      "rating": 3,
+      "slots": 2
+    },
+    {
+      "id": 3,
+      "name": "Soapy Shine",
+      "distance": 7,
+      "rating": 2,
+      "slots": 2
+    },
+    {
+      "id": 4,
+      "name": "Washed Up",
+      "distance": 17,
+      "rating": 1,
+      "slots": 2
+    },
+    {
+      "id": 5,
+      "name": "Wash Me",
+      "distance": 52,
+      "rating": 5,
+      "slots": 2
+    },
+    {
+      "id": 6,
+      "name": "Hulio's In",
+      "distance": 12,
+      "rating": 5,
+      "slots": 2
+    },
+    {
+      "id": 7,
+      "name": "Splashy",
+      "distance": 14,
+      "rating": 4,
+      "slots": 2
+    },
+    {
+      "id": 8,
+      "name": "Speek n Span",
+      "distance": 23,
+      "rating": 1,
+      "slots": 2
+    },
+    {
+      "id": 9,
+      "name": "Hell's Garage",
+      "distance": 34,
+      "rating": 2,
+      "slots": 2
+    },
+    {
+      "id": 10,
+      "name": "Olifant's Splash",
+      "distance": 16,
+      "rating": 5,
+      "slots": 2
+    }
+  ],
+  "carWashBookings": [
+    {
+      "id": 1,
+      "timeIn": "11:30",
+      "estimatedTimeOut": "12:00",
+      "status": "ACTIVE",
+      "notes": "",
+      "position": 1,
+      "currentUser": false,
+      "code": "hkajshd872",
+      "product": {
+        "id": 1,
+        "name": "Full Wash",
+        "price": 150,
+        "estimatedTime": 45
+      }
+    },
+    {
+      "id": 2,
+      "timeIn": "11:30",
+      "estimatedTimeOut": "12:00",
+      "status": "ACTIVE",
+      "notes": "",
+      "position": 2,
+      "currentUser": false,
+      "code": "defzaxd872",
+      "product": {
+        "id": 2,
+        "name": "Exterior",
+        "price": 100,
+        "estimatedTime": 30
+      }
+    },
+    {
+      "id": 3,
+      "timeIn": "12:00",
+      "estimatedTimeOut": "12:30",
+      "status": "ENQUEUED",
+      "notes": "",
+      "position": 3,
+      "currentUser": false,
+      "code": "fvftgffd872",
+      "product": {
+        "id": 2,
+        "name": "Exterior",
+        "price": 100,
+        "estimatedTime": 30
+      }
+    },
+    {
+      "id": 4,
+      "timeIn": "12:30",
+      "estimatedTimeOut": "13:00",
+      "status": "ENQUEUED",
+      "notes": "Please do not use the hoover on the back",
+      "position": 4,
+      "currentUser": true,
+      "code": "redhbvd343",
+      "product": {
+        "id": 1,
+        "name": "Full Wash",
+        "price": 150,
+        "estimatedTime": 45
+      }
+    },
+    {
+      "id": 5,
+      "timeIn": "13:00",
+      "estimatedTimeOut": "13:30",
+      "status": "CANCELLED",
+      "notes": "",
+      "position": 5,
+      "currentUser": false,
+      "code": "redgfdc433",
+      "product": {
+        "id": 2,
+        "name": "Exterior",
+        "price": 100,
+        "estimatedTime": 30
+      }
+    },
+    {
+      "id": 6,
+      "timeIn": "13:30",
+      "estimatedTimeOut": "14:00",
+      "status": "DONE",
+      "notes": "",
+      "position": 6,
+      "currentUser": false,
+      "code": "edswedf231",
+      "product": {
+        "id": 2,
+        "name": "Exterior",
+        "price": 100,
+        "estimatedTime": 30
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Full Wash",
+      "price": 150,
+      "estimatedTime": 45
+    },
+    {
+      "id": 2,
+      "name": "Exterior",
+      "price": 100,
+      "estimatedTime": 30
+    }
+  ],
+  "request-products": [
+    {
+      "id": 1,
+      "name": "Full Wash",
+      "price": 200,
+      "estimatedTime": 60
+    },
+    {
+      "id": 2,
+      "name": "Exterior Wash",
+      "price": 130,
+      "estimatedTime": 45
+    },
+    {
+      "id": 3,
+      "name": "Interior Wash",
+      "price": 100,
+      "estimatedTime": 30
+    }
+  ],
+  "request-wash": [
+    {
+      "id": 1,
+      "serviceProviderName": "David Mncunu",
+      "serviceProviderCompany": "The Washers inc.",
+      "status": "Active",
+      "statusDetails": "Accepted",
+      "currentUser": false,
+      "customer": "Lethabo Mbokazi",
+      "distance": "15 km",
+      "location": "252 Montrose Avenue, Randburg 2162",
+      "product": {
+        "id": 1,
+        "name": "Full Wash",
+        "price": 200,
+        "estimatedTime": 60
+      }
+    },
+    {
+      "currentUser": true,
+      "serviceProviderCompany": "Mobile Washers",
+      "serviceProviderName": "Bongani Mzolo",
+      "status": "DONE",
+      "statusDetails": "ENDED",
+      "product": {
+        "id": 1,
+        "name": "Full Wash",
+        "price": 200,
+        "estimatedTime": 60
+      },
+      "customer": "Lethabo Mbokazi",
+      "location": "252 Montrose Avenue, Northgate 2162",
+      "distance": "15km",
+      "id": 2
+    }
+  ]
+}

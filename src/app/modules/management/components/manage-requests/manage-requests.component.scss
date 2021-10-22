@@ -1,0 +1,27 @@
+.active {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: green;
+}
+.incoming {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: grey;
+}
+.pending {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(73, 168, 206);
+}
+
+.button-width{
+  width: 180px;
+  margin-top: 8px;
+}
+
+.card-margin{
+  margin-top: 50px !important;
+}

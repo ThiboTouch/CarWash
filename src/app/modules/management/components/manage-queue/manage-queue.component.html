@@ -1,0 +1,99 @@
+<div class="container expansion-panel">
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>Products</mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-products (bookingAdded)="getBookings()" [bookings]="dataSource" [carWash]="carWash"></app-products>
+  </mat-expansion-panel>
+</div>
+
+<div class="container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Time In Column -->
+    <ng-container matColumnDef="timeIn">
+      <th mat-header-cell *matHeaderCellDef>Time in</th>
+      <td mat-cell *matCellDef="let element">{{ element.timeIn }}</td>
+    </ng-container>
+
+    <!-- Estimated Time Column -->
+    <ng-container matColumnDef="estimatedTimeOut">
+      <th mat-header-cell *matHeaderCellDef>Estimated time out</th>
+      <td mat-cell *matCellDef="let element">{{ element.estimatedTimeOut }}</td>
+    </ng-container>
+
+    <!-- Product Column -->
+    <ng-container matColumnDef="product">
+      <th mat-header-cell *matHeaderCellDef>Product</th>
+      <td mat-cell *matCellDef="let element">{{ element.product.name }}</td>
+    </ng-container>
+
+     <!-- Code Column -->
+     <ng-container matColumnDef="code">
+      <th mat-header-cell *matHeaderCellDef>Code</th>
+      <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+    </ng-container>
+
+     <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let element">
+        <ng-container *ngFor="let actionType of action | keyvalue">
+          <ng-container [ngSwitch]="actionType.key">
+            <button
+              mat-mini-fab
+              color="primary"
+              (click)="openDialog(actionType, element)"
+              matTooltip="Start washing the car"
+              *ngSwitchCase="action.Start"
+              [disabled]="element.status === bookingStatus.Active || !isSlotAvailable"
+            >
+              <mat-icon>play_arrow</mat-icon>
+            </button>
+            <button
+              mat-mini-fab
+              [disabled]="!(element.status === bookingStatus.Active)"
+              color="accent"
+              (click)="openDialog(actionType, element)"
+              matTooltip="Stop washing the car"
+              *ngSwitchCase="action.Stop"
+            >
+              <mat-icon>stop</mat-icon>
+            </button>
+            <button
+              mat-mini-fab
+              [disabled]="element.status === bookingStatus.Active"
+              color="warn"
+              matTooltip="Cancel the item from the queue"
+              (click)="openDialog(actionType, element)"
+              *ngSwitchCase="action.Cancel"
+            >
+              <mat-icon>clear</mat-icon>
+            </button>
+            <button
+              mat-mini-fab
+              color="primary"
+              matTooltip="View additional details for this item"
+              (click)="openDialog(actionType, element)"
+              *ngSwitchCase="action.Notes"
+            >
+              <mat-icon>notes</mat-icon>
+            </button>
+          </ng-container>
+        </ng-container>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
